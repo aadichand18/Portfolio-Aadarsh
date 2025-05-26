@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .fixedheader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgb(9, 9, 61);
+        z-index: 1000; 
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 70px;
+        background-color: rgb(9, 9, 61);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0 23px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        color: rgb(175, 175, 231);
+        font-size: 1.1rem;
+    }
+
+    .left {
+        font-size: 1.5rem;
+    }
+
+    .first {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 130px 20px;
+    }
+
+    .first div {
+        width: 30%;
+        padding: 10px;
+    }
+
+    .first ul {
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .leftsection {
+        font-size: 2rem;
+    }
+
+    .leftsection li{
+        list-style: none;
+    }
+
+    .rightsection {
+        width: 80%;
+        justify-content: center;
+    }
+
+    img {
+        border-radius: 50%;
+    }
+
+    .purple {
+        color: rgb(151, 69, 205);
+    }
+
+    .textgrey {
+        color: gray;
+    }
+
+    #element {
+        color: rgb(151, 69, 205);
+    }
+
+    .button{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        margin: 15px;
+        background: transparent;
+    }
+
+    .button .btn:hover{
+        background: transparent;
+        font-size: 2rem;
+        transition: 0.4s;
+    }
+
+    .leftsection .btn{
+        padding: 12px;
+        color: white;
+        border: 2px solid rgb(13, 76, 171);
+        cursor: pointer;
+    }
+
+    .about {
+        max-width: 80vw;
+        height: 300px;
+        text-align: center;
+        margin: auto;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    .about h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .skills {
+        max-width: 80vw;
+        height: 20vw;
+        text-align: center;
+        margin: auto;
+        width: 80%;
+    }
+
+    .skills h1 {
+        font-size: 1.6rem;
+    }
+
+    .skills ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .skills ul li {
+        list-style: none;
+        margin: 0 23px;
+        background-color: white;
+        color: blueviolet;
+        font-size: large;
+        font-weight: 500;
+        border: 1.5px solid rgb(123, 111, 179);
+        border-width: 4px;
+        border-radius: 10px;
+        padding: 12px 25px;
+    }
+
+    .second {
+        max-width: 80vw;
+        margin: auto;
+        height: 40vh;
+        font-size: 1.4rem;
+    }
+
+    .second h1 {
+        font-size: 1.6rem;
+    }
+
+    .footer {
+        text-align: center;
+        margin: auto;
+        padding: 40px;
+        height: 5px;
+    }
+
+    .footer li {
+        padding: 1px;
+        font-size: 1.1rem;
+    }
+
+    .footerrights {
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    /* PESE 600 E-Portfolio Styles */
+    .pese600 {
+        max-width: 80vw;
+        margin: 40px auto;
+        background: rgb(9, 9, 61);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(151, 69, 205, 0.3);
+    }
+
+    .pese600 h1 {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        color: rgb(151, 69, 205);
+    }
+
+    .pese600 .about, 
+    .pese600 .week {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+    }
+
+    .pese600 h2 {
+        color: rgb(175, 175, 231);
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .pese600 p, 
+    .pese600 li {
+        font-size: 1.2rem;
+        color: #ddd;
+        margin-bottom: 8px;
+    }
+
+    .pese600 strong {
+        color: white;
+    }
+
+    .pese600 ul {
+        margin-top: 10px;
+        padding-left: 30px;
+    }
+
+    .pese600 ul li {
+        margin-bottom: 10px;
+    }
+
+    .video-container {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .video-container video {
+        max-width: 100%;
+        border-radius: 8px;
+        border: 2px solid rgb(151, 69, 205);
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="fixedheader">
+        <nav>
+            <div class="left">Aadarsh's Portfolio </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Experiance">Experiences</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#PESE600">PESE 600</a></li>
+                    <li><a href="#Contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="Home" class="first">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">Aadarsh</span>
+                <li>and I'm a passionate</li>
+                <span id="element"></span>
+                <div class="button">
+                    <a href="https://www.linkedin.com/in/aadarsh-chand-702a871a8"><button class="btn"><img src="linkedin.png" width="60" height="55" alt=""></button></a>
+                    <a href="https://github.com/adachand"><button class="btn"><img src="github.png" width="60" height="55" alt=""></button></a>
+                    <a href="https://drive.google.com/file/d/1A3c7-zvdOUlygUccRDjFHNI5vtE0YLjg/view?usp=drivesdk "><button class="btn"><img src="resume.png" width="60" height="55" alt=""></button></a>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="aadarsh.jpg" width="300" height="350" alt="Avatar">
+            </div>
+        </section>
+
+        <section id="About" class="about">
+            <h1>About Me</h1>
+            <br>
+            <p>Hello, I'm Aadarsh chand, currently pursuing a B.Tech in Computer Science at Graphic Era Hill University in Dehradun. 
+                Proficiency in programming languages like C, C++, and Java has been my forte, 
+                and I've cultivated these skills through a combination of hands-on experience and rigorous coursework. 
+                Beyond my academic pursuits, I am deeply passionate about technology and always eager to explore new horizons. 
+                In my free time, I engage in learning and experimenting with Android and web development, constantly pushing my boundaries to 
+                stay updated with the latest trends in the tech world.</p>
+        </section>
+
+        <section id="Skills" class="skills">
+            <h1>Skills</h1>
+            <br>
+            <br>
+            <ul>
+                <li>C</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+            </ul>
+        </section>
+
+        <section id="Experiance" class="second">
+            <span class="textgrey">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <br>
+            <li>Oasis Infobyte</li>
+            <li>Bharat Intern</li>
+            <li>Codsoft</li>
+            <li>Date:- Oct 2024 -Nov 2024 </li>
+            <li>Position:- Working as Web Devloper and ML Engineer </li>
+        </section>
+
+        <!-- PESE 600 E-Portfolio Section -->
+        <section id="PESE600" class="pese600">
+            <h1>PESE 600 E-Portfolio</h1>
+
+            <div class="about">
+                <h2>About Me</h2>
+                <p>A passionate Machine Learning enthusiast skilled in AI, software development, and model optimization. Experienced in tackling dataset bias and enhancing performance. Also engaged in event management, bringing leadership and organizational skills to the table.</p>
+            </div>
+
+            <div class="week">
+                <h2>Week 1: Sixer Intro</h2>
+                <p><strong>Key Learning:</strong> I have learned that a self-introduction (Sixer Theory) should be clear, concise, and engaging, tailored to the role. It must highlight internships, projects, research, and certifications briefly while emphasizing skills, achievements, and learnings. A well-structured, confident, and to-the-point delivery ensures a strong impression.</p>
+                <div class="video-container">
+                    <video width="320" height="240" controls>
+                        <source src="week1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="week">
+                <h2>Week 2: Five-Step Intro</h2>
+                <p><strong>Key Learning:</strong> I have learned that the self-introduction (Five Ring Theory) covers Name, Place, Education, Family, and Goals, highlighting key skills and experiences. It connects family background to job-relevant qualities like teamwork and problem-solving. With a short-term goal of securing placement and contributing to growth, and a long-term vision of setting industry benchmarks, this structured approach ensures a strong impact.</p>
+                <div class="video-container">
+                    <video width="320" height="240" controls>
+                        <source src="week2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="week">
+                <h2>Week 3: 25-Word Intro</h2>
+                <p><strong>Self-Intro (25 Words):</strong> B.Tech CS student skilled in web development and DSA, with projects in sentiment analysis, speech recognition, and breast cancer detection; active in hackathons.</p>
+                <p><strong>Key Learning:</strong> I have learned that a self-introduction consisting of 25 words should be concise and focus only on name, experience, and job-related details to make it clear and impactful.</p>
+            </div>
+
+            <div class="week">
+                <h2>Week 4: Resume</h2>
+                <p><strong>Key Learning:</strong> I have learned that a resume should highlight skills, interests, and career goals while aligning them with suitable opportunities. Showcasing technical and soft skills, achievements, and activities strengthens professional growth.</p>
+                <p><strong>Resume Structure:</strong></p>
+                <ul>
+                    <li>Personal Details – Name, Address, Contact, LinkedIn, GitHub</li>
+                    <li>Career Objective – Brief, to-the-point goal statement</li>
+                    <li>Recently – Educational qualifications and recent work</li>
+                    <li>Skills – Technical & soft skills</li>
+                    <li>Achievements/Activities – Awards, certifications, languages</li>
+                    <li>Hobbies – Personal interests</li>
+                </ul>
+            </div>
+
+            <div class="week">
+                <h2>Week 5: Group Discussion</h2>
+                <p>Hi, I'm Adarsh. Participating in group discussions has been an enlightening experience. I've learned that GDs are not just about voicing my own opinions but also about understanding and appreciating others' perspectives. This collaborative environment has enhanced my communication skills and taught me the importance of active listening.</p>
+                <p>Engaging in these discussions has also improved my critical thinking abilities. By analyzing different viewpoints, I've learned to approach problems more holistically and consider multiple solutions. This practice has prepared me to work effectively in team settings, where diverse ideas lead to innovative outcomes.</p>
+                <p>Overall, GD classes have equipped me with essential skills like effective communication, teamwork, and problem-solving, which are invaluable for both academic and professional success.</p>
+            </div>
+
+            <div class="week">
+                <h2>Weeks 6-8: Group Discussion Insights</h2>
+                <p>During Weeks 6 to 8, our group discussions were particularly enlightening. Initially, many of us, including myself, weren't fully prepared for the topics at hand. However, this lack of preparation turned out to be a valuable lesson in adaptability and active participation.</p>
+                <p>What stood out was Vishal Sir's approach to facilitating these discussions. His ability to steer conversations, even when the class wasn't entirely ready, showcased the importance of effective facilitation. He emphasized that group discussions aren't just about having the right answers but about engaging in meaningful dialogue, listening actively, and building upon each other's ideas.</p>
+                <p>Engaging with my peers, I realized the richness of diverse perspectives. Each student brought a unique viewpoint, challenging me to think differently and broaden my understanding of various topics. This experience highlighted that group discussions are collaborative efforts aimed at collective growth rather than individual validation.</p>
+                <p>These sessions also underscored the real-world applicability of group discussions. The skills we practiced—effective communication, active listening, and collaborative problem-solving—are essential not just academically but also in professional settings like interviews and team projects. Understanding this connection has motivated me to further hone these skills.</p>
+            </div>
+             <div class="week">
+                <h2>Final Video log</h2>
+                <div class="video-container">
+                    <video width="320" height="240" controls>
+                        <source src="Final_log.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+        <hr>
+    </main>
+
+    <footer id="Contact" class="footer">
+        <h1>Contact Me</h1>
+        <br>
+        <li>Email: cadarsh075@gmail.com</li>
+        <li>Phone:567-123-7790</li>
+        <div class="footerrights">
+            Copyright &#169 www.AadarshPortfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
